@@ -4,7 +4,19 @@ import (
 	"fmt"
 	"github.com/djosephsen/hal"
 	"time"
+	"strings"
 )
+
+var ListRooms = &hal.Handler{
+	Method:  hal.RESPOND,
+	Pattern: `(what room)|(list *room)|(room *list)`,
+	Run: func(res *hal.Response) error {
+		room := res.Message.Room
+		reply := fmt.Sprintf("Current room is: %s",room)
+		return res.Send(reply)
+	},
+}
+
 
 var ListChores = &hal.Handler{
 	Method:  hal.RESPOND,
@@ -23,12 +35,15 @@ var ListChores = &hal.Handler{
 	},
 }
 
-var ListRooms = &hal.Handler{
+var StopChore = &hal.Handler{
 	Method:  hal.RESPOND,
-	Pattern: `(what room)|(list *room)|(room *list)`,
+	Pattern: `(stop chore)|(chore stop)`,
 	Run: func(res *hal.Response) error {
-		room := res.Message.Room
-		reply := fmt.Sprintf("Current room is: %s",room)
-		return res.Send(reply)
+		var reply string
+		cname:=strings.SplitAfterN(res.Match[0],` `,3)
+		c:=hal.GetChoreByName(cname[2],res.Robot)
+		hal.KillChore(c)
+		reply = fmt.Sprintf("%s\n%s:small_blue_diamond:%s:small_blue_diamond:%v:small_blue_diamond:%s",reply,c.Name, c.Sched, c.Next.Sub(time.Now()), c.State)
+		return res.Reply(reply)
 	},
 }
