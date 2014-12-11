@@ -1,0 +1,44 @@
+{
+	"ImportPath": "github.com/djosephsen/testybot",
+	"GoVersion": "go1.3.3",
+	"Deps": [
+		{
+			"ImportPath": "bitbucket.org/kardianos/osext",
+			"Comment": "null-15",
+			"Rev": "44140c5fc69ecf1102c5ef451d73cd98ef59b178"
+		},
+		{
+			"ImportPath": "github.com/ccding/go-config-reader/config",
+			"Rev": "8b6c2b50197f20da3b1c5944c274c173634dc056"
+		},
+		{
+			"ImportPath": "github.com/ccding/go-logging/logging",
+			"Comment": "v0.1-15-gc0585d1",
+			"Rev": "c0585d19814ac8e8a37b9253bf25cc6152ba7a6b"
+		},
+		{
+			"ImportPath": "github.com/danryan/env",
+			"Rev": "bc567f4d372a17eb756004cdbfd8458ecc04b07e"
+		},
+		{
+			"ImportPath": "github.com/davecgh/go-spew/spew",
+			"Rev": "83f84dc933714d51504ceed59f43ead21d096fe7"
+		},
+		{
+			"ImportPath": "github.com/djosephsen/bothandlers",
+			"Rev": "10a958dbaad92703fcab81cc59ca5d65a07fe2a4"
+		},
+		{
+			"ImportPath": "github.com/djosephsen/hal",
+			"Rev": "a671c470925cc51cd604c4b5e426e671440c9679"
+		},
+		{
+			"ImportPath": "github.com/gorhill/cronexpr",
+			"Rev": "a557574d6c024ed6e36acc8b610f5f211c91568a"
+		},
+		{
+			"ImportPath": "github.com/thoj/go-ircevent",
+			"Rev": "5e6704d8956eeba81a2cbac9ba73bd609da39d0f"
+		}
+	]
+}
