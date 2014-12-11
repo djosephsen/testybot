@@ -1,0 +1,9 @@
+#!/bin/sh
+godep update github/djosephsen/hal
+godep update github/djosephsen/bothandlers
+
+git add --all .
+git commit -am "$@"
+
+git push
+git push heroku
