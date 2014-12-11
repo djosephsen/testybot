@@ -22,7 +22,7 @@ func run() int {
 	)
 
 	robot.Schedule(
-		bothandlers.SecondTest,
+		bothandlers.Secondtest,
 		)
 
 	if err := robot.Run(); err != nil {
