@@ -3,9 +3,9 @@
 h config:set BUILDPACK_URL=https://github.com/kr/heroku-buildpack-go.git
 h config:set HAL_ADAPTER=slack
 h config:set HAL_LOG_LEVEL=debug
-h config:set HAL_NAME=hustlebot
-h config:set HAL_SLACK_BOTNAME=hustlebot
+h config:set HAL_NAME=testy
+h config:set HAL_SLACK_BOTNAME=testy
 h config:set HAL_SLACK_CHANNEL_MODE=blacklist
-h config:set HAL_SLACK_TEAM=evangelistcollective
-h config:set HAL_SLACK_TOKEN=token
+h config:set HAL_SLACK_TEAM=hustlebotdev
+h config:set HAL_SLACK_TOKEN=v4n5YCLgbKhs1mPrq902vaBg
 h config:set PORT=80
