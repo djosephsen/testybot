@@ -14,7 +14,7 @@ var ListChores = &hal.Handler{
 			reply=`No chores have been registered (sorry?)`
 		}else{
 			for _,c := range res.Robot.Chores{
-				reply = fmt.Sprintf("%s\n%s:%s:%s:%s",reply,c.Name, c.Schedule, c.Next, c.State)
+				reply = fmt.Sprintf("%s\n%s:small_blue_diamond:%s:small_blue_diamond:%s:small_blue_diamond:%s",reply,c.Name, c.Schedule, c.Next, c.State)
 			}
 		}
 		return res.Reply(reply)
