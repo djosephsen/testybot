@@ -1,6 +1,6 @@
 #!/bin/sh
-godep update github/djosephsen/hal
-godep update github/djosephsen/bothandlers
+godep update github.com/djosephsen/hal
+godep update github.com/djosephsen/bothandlers
 
 git add --all .
 git commit -am "$@"
