@@ -9,6 +9,6 @@ var Secondtest = &hal.Chore{
 	Schedule: `* * * * * *`,
 	Room: `C02JM295Z`,
 	Run: func(res *hal.Response) error {
-		return res.Reply(`successful test!`)
+		return res.Send(`successful test!`)
 	},
 }

@@ -1,11 +1,11 @@
 #!/bin/sh
 
-h config:set BUILDPACK_URL=https://github.com/kr/heroku-buildpack-go.git
-h config:set HAL_ADAPTER=slack
-h config:set HAL_LOG_LEVEL=debug
-h config:set HAL_NAME=testy
-h config:set HAL_SLACK_BOTNAME=testy
-h config:set HAL_SLACK_CHANNEL_MODE=blacklist
-h config:set HAL_SLACK_TEAM=hustlebotdev
-h config:set HAL_SLACK_TOKEN=v4n5YCLgbKhs1mPrq902vaBg
-h config:set PORT=80
+heroku config:set BUILDPACK_URL=https://github.com/kr/heroku-buildpack-go.git
+heroku config:set HAL_ADAPTER=slack
+heroku config:set HAL_LOG_LEVEL=debug
+heroku config:set HAL_NAME=testy
+heroku config:set HAL_SLACK_BOTNAME=testy
+heroku config:set HAL_SLACK_CHANNEL_MODE=blacklist
+heroku config:set HAL_SLACK_TEAM=hustlebotdev
+heroku config:set HAL_SLACK_TOKEN=v4n5YCLgbKhs1mPrq902vaBg
+heroku config:set PORT=80
