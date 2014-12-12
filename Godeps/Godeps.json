@@ -30,7 +30,7 @@
 		},
 		{
 			"ImportPath": "github.com/djosephsen/hal",
-			"Rev": "766689c745ae0ec47703f81addf9c5295bfdfde5"
+			"Rev": "7f79f77cf6525be295f50e347bd52504d9625913"
 		},
 		{
 			"ImportPath": "github.com/gorhill/cronexpr",
