@@ -21,6 +21,7 @@ func run() int {
 		bothandlers.IKR,
 		bothandlers.ListChores,
 		bothandlers.ListRooms,
+		bothandlers.ManageChores,
 	)
 
 	robot.Schedule(

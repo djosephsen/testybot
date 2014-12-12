@@ -26,11 +26,11 @@
 		},
 		{
 			"ImportPath": "github.com/djosephsen/bothandlers",
-			"Rev": "7fa01a1a2b472ee6977562116e1a8ec60e3d6b0c"
+			"Rev": "397c365d505add4c4554d64d692c78416cdcfe2c"
 		},
 		{
 			"ImportPath": "github.com/djosephsen/hal",
-			"Rev": "7f79f77cf6525be295f50e347bd52504d9625913"
+			"Rev": "3470405019d552efbf16ab7a41732ef7ce9cd159"
 		},
 		{
 			"ImportPath": "github.com/gorhill/cronexpr",
