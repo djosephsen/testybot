@@ -20,6 +20,7 @@ func run() int {
 		bothandlers.Tableflip,
 		bothandlers.IKR,
 		bothandlers.ListChores,
+		bothandlers.ListRooms,
 	)
 
 	robot.Schedule(
