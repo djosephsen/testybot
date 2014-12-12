@@ -1,9 +1,20 @@
 #!/bin/sh
+
+function balk {
+	echo "$@"
+	exit 1
+}
+	
 godep update github.com/djosephsen/hal
+[ $? -ne 0 ] && balk "godep update failed for hal"
 godep update github.com/djosephsen/bothandlers
+[ $? -ne 0 ] && balk "godep update failed for bothandlers"
 
 git add --all .
+[ $? -ne 0 ] && balk "git add failed"
 git commit -am "$@"
+[ $? -ne 0 ] && balk "git commit failed"
 
 git push
+[ $? -ne 0 ] && balk "git push failed"
 git push heroku
