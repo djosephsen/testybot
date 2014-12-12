@@ -50,7 +50,7 @@ func (robot *Robot) Schedule(chores ...*Chore) error{
 		c.Resp = NewResponseFromThinAir(robot, c.Room)
 		StartChore(c)
 		Logger.Debug("appending chore: ",c.Name, " to robot.Chores")
-		robot.Chores = append(robot.Chores, *c)
+		robot.Chores = append(robot.Chores, c)
 	}
 	return nil
 }
@@ -95,7 +95,7 @@ func StartChore(c *Chore) error{
 func GetChoreByName(name string, robot *Robot) *Chore{
 	for _, c := range robot.Chores {
 		if c.Name == name{
-			return &c
+			return c
 		}else{
 			Logger.Debug("chore not found: ",name)
 		}
