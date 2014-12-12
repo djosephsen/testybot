@@ -23,9 +23,9 @@ func run() int {
 		bothandlers.ListRooms,
 	)
 
-	robot.Schedule(
-		bothandlers.Secondtest,
-		)
+//	robot.Schedule(
+//		bothandlers.Secondtest,
+//		)
 
 	if err := robot.Run(); err != nil {
 		hal.Logger.Error(err)
