@@ -19,8 +19,8 @@ func run() int {
 		bothandlers.Syn,
 		bothandlers.Tableflip,
 		bothandlers.IKR,
-		bothandlers.ListChores,
-		bothandlers.ListRooms,
+//		bothandlers.ListChores,
+//		bothandlers.ListRooms,
 	)
 
 //	robot.Schedule(
