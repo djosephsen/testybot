@@ -3,6 +3,7 @@ package bothandlers
 import (
 	"fmt"
 	"github.com/djosephsen/hal"
+	"time"
 )
 
 var ListChores = &hal.Handler{
@@ -13,9 +14,9 @@ var ListChores = &hal.Handler{
 		if len(res.Robot.Chores) == 0{
 			reply=`No chores have been registered (sorry?)`
 		}else{
-			reply=`Name  :small_blue_diamond:  Schedule  :small_blue_diamond:  Next Run  :small_blue_diamond: Current State`
+			reply=`Name  :small_blue_diamond:  Schedule  :small_blue_diamond:  Firing in  :small_blue_diamond: Current State`
 			for _,c := range res.Robot.Chores{
-				reply = fmt.Sprintf("%s\n%s:small_blue_diamond:%s:small_blue_diamond:%s:small_blue_diamond:%s",reply,c.Name, c.Sched, c.Next, c.State)
+				reply = fmt.Sprintf("%s\n%s:small_blue_diamond:%s:small_blue_diamond:%v:small_blue_diamond:%s",reply,c.Name, c.Sched, c.Next.Sub(time.Now()), c.State)
 			}
 		}
 		return res.Reply(reply)
