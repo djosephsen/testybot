@@ -37,17 +37,21 @@ var ListChores = &hal.Handler{
 
 var ManageChores = &hal.Handler{
 	Method:  hal.RESPOND,
-	Pattern: `(start|stop) chore \w`,
+	Pattern: `(start|stop) chore .*`,
 	Run: func(res *hal.Response) error {
 		var reply string
-		cname:=strings.SplitAfterN(res.Match[0],` `,3)
-		c:=hal.GetChoreByName(cname[2],res.Robot)
-		if cname[0] == `stop`{
-			hal.KillChore(c)
+		cname:=strings.SplitAfterN(res.Match[0],` `,4)
+		c:=hal.GetChoreByName(cname[3],res.Robot)
+		if c == nil{ 
+			reply = fmt.Sprintf("Chore not found: %s",(cname[3]))
 		}else{
-			hal.StartChore(c)
+			if cname[1]==`stop `{
+				hal.KillChore(c)
+			}else{
+				hal.StartChore(c)
+			}
+			reply = fmt.Sprintf("%s\n%s:small_blue_diamond:%s:small_blue_diamond:%v:small_blue_diamond:%s",reply,c.Name, c.Sched, c.Next.Sub(time.Now()), c.State)
 		}
-		reply = fmt.Sprintf("%s\n%s:small_blue_diamond:%s:small_blue_diamond:%v:small_blue_diamond:%s",reply,c.Name, c.Sched, c.Next.Sub(time.Now()), c.State)
 		return res.Reply(reply)
 	},
 }
