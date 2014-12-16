@@ -104,7 +104,8 @@ func makeWar(user string) string{
 	`balloon`,
 	}
 
-	switch rand.Intn(2) {
+	n:=rand.Intn(2) {
+	switch n {
 		case 1:
 	   	i:=new(insult)
 			resp,_:=http.Get(`http://pleaseinsult.me/api`)
@@ -114,7 +115,7 @@ func makeWar(user string) string{
 		case 2:
 			return fmt.Sprintf("%s is a %s %s %s",user, it1[rand.Intn(len(it1))], it2[rand.Intn(len(it2))],it3[rand.Intn(len(it3))])
 	}
-	return `... derp, excuse me I have a bug`
+	return fmt.Sprintf("... derp, excuse me I have a bug: %s",n)
 }
 
 func makeLove(user string) string{

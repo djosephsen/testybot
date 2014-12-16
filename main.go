@@ -25,9 +25,9 @@ func run() int {
 		bothandlers.LoveAndWar,
 	)
 
-	robot.Schedule(
-		bothandlers.ChoreTest,
-		)
+//	robot.Schedule(
+//		bothandlers.ChoreTest,
+//		)
 
 	if err := robot.Run(); err != nil {
 		hal.Logger.Error(err)
