@@ -30,7 +30,7 @@ var LoveAndWar = &hal.Handler{
 		}else if act == `insult`{
 			reply=makeWar(user)
 		}
-				return res.Reply(reply)
+				return res.Respond(reply)
 	},
 }
 
