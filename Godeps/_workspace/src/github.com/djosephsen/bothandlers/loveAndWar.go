@@ -16,7 +16,7 @@ type insult struct{
 
 var LoveAndWar = &hal.Handler{
 	Method:  hal.RESPOND,
-	Pattern: `(love|insult) (\w+)`,
+	Pattern: `(love|insult) (@*\w+)`,
 	Run: func(res *hal.Response) error {
 		act:=res.Match[1]
 		user:=res.Match[2]
