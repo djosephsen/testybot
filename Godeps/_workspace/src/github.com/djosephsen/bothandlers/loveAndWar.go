@@ -14,7 +14,7 @@ type insult struct{
    Severity string
 }
 
-var loveAndWar = &hal.Handler{
+var LoveAndWar = &hal.Handler{
 	Method:  hal.RESPOND,
 	Pattern: `(love|insult) (\w+)`,
 	Run: func(res *hal.Response) error {

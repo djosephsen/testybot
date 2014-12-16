@@ -22,7 +22,7 @@ func run() int {
 		bothandlers.ListChores,
 		bothandlers.ListRooms,
 		bothandlers.ManageChores,
-		bothandlers.loveAndWar,
+		bothandlers.LoveAndWar,
 	)
 
 	robot.Schedule(
