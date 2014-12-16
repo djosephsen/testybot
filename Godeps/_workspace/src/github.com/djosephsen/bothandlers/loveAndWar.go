@@ -104,7 +104,7 @@ func makeWar(user string) string{
 	`balloon`,
 	}
 
-	n:=rand.Intn(2) {
+	n:=rand.Intn(2) 
 	switch n {
 		case 1:
 	   	i:=new(insult)
