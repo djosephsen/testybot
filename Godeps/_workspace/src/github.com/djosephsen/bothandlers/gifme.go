@@ -3,6 +3,7 @@ package bothandlers
 import (
 	"github.com/djosephsen/hal"
 	"net/http"
+	"net/url"
 	"encoding/json"
 	"fmt"
 )
@@ -39,10 +40,11 @@ var Gifme = &hal.Handler{
 	Run: func(res *hal.Response) error {
 	
 		search:=res.Match[1]
-		url:=fmt.Sprintf("http://api.giphy.com/v1/gifs/random?rating=pg&api_key=dc6zaTOxFJmzC&tag=%s",search)
-		hal.Logger.Debug(`url is`,url)
+		myurl:=fmt.Sprintf("http://api.giphy.com/v1/gifs/random?rating=pg&api_key=dc6zaTOxFJmzC&tag=%s",search)
+		myurl=url.QueryEscape(myurl)
+		hal.Logger.Debug(`myurl is`,myurl)
 		g:=new(gifyout)
-		resp,_:=http.Get(url)
+		resp,_:=http.Get(myurl)
 		dec:= json.NewDecoder(resp.Body)
 		dec.Decode(g)
 		return res.Send(g.Data.Image_url)
