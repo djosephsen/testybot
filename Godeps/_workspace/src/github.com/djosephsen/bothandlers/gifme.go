@@ -39,8 +39,8 @@ var Gifme = &hal.Handler{
 	Run: func(res *hal.Response) error {
 	
 		search:=res.Match[1]
-		hal.Logger.Debug(`match 1 is `,res.Match[1])
 		url:=fmt.Sprintf("http://api.giphy.com/v1/gifs/random?rating=pg&api_key=dc6zaTOxFJmzC&tag=%s",search)
+		hal.Logger.Debug(`url is`,url)
 		g:=new(gifyout)
 		resp,_:=http.Get(url)
 		dec:= json.NewDecoder(resp.Body)
