@@ -8,7 +8,7 @@ import (
 
 var ListRooms = &hal.Handler{
 	Method:  hal.RESPOND,
-	Usage:	`Chores/ListRooms: botname (what room)|(list *room)|(room *list): prints the Name of the current chatroom`,
+	Usage:	`*Chores/ListRooms*: botname (what room)|(list *room)|(room *list): prints the Name of the current chatroom`,
 	Pattern: `(what room)|(list *room)|(room *list)`,
 	Run: func(res *hal.Response) error {
 		room := res.Message.Room
@@ -21,7 +21,7 @@ var ListRooms = &hal.Handler{
 var ListChores = &hal.Handler{
 	Method:  hal.RESPOND,
 	Pattern: `(list chores)|(chore list)`,
-	Usage:	`Chores/ListChores: botname (list chores)|(chore list): lists all registered chores`,
+	Usage:	`*Chores/ListChores*: botname (list chores)|(chore list): lists all registered chores`,
 	Run: func(res *hal.Response) error {
 		var reply string
 		if len(res.Robot.Chores) == 0{
@@ -38,7 +38,7 @@ var ListChores = &hal.Handler{
 
 var ManageChores = &hal.Handler{
 	Method:  hal.RESPOND,
-	Usage:	`Chores/ManageChores: botname (start|stop) chore [chorename]: stops or starts the named chore`,
+	Usage:	`*Chores/ManageChores*: botname (start|stop) chore [chorename]: stops or starts the named chore`,
 	Pattern: `(start|stop) chore (.*)`,
 	Run: func(res *hal.Response) error {
 		var reply string

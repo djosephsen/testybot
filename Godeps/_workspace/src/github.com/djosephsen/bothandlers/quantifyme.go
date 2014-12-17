@@ -10,7 +10,7 @@ import (
 var Quantifyme = &hal.Handler{
 	Method:  hal.RESPOND,
 	Pattern: `quantify (\S+)`,
-	Usage: `Quantifyme: botname quantify <noun>: replies with a randomly generated quantification of funny but probably NSFW personal attributes like 'mads', 'fucks', horribleness and passive-aggresivity`,
+	Usage: `*Quantifyme*: botname quantify <noun>: replies with a randomly generated quantification of funny but probably NSFW personal attributes like 'mads', 'fucks', horribleness and passive-aggresivity`,
 	Run: func(res *hal.Response) error {
 		user:=res.Match[1]
 		if user==`me`{ user=`you` }

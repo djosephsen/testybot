@@ -9,7 +9,7 @@ import (
 var Help = &hal.Handler{
 	Method:  hal.HEAR,
 	Pattern: `help`,
-	Usage: `help: prints this message when you type "botname help"`,
+	Usage: `*help*: prints this message when you type "botname help"`,
 	Run: func(res *hal.Response) error {
 		var reply string
 		handlers:=res.Robot.Handlers()

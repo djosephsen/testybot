@@ -15,7 +15,7 @@ func (h *ikr) Method() string {
 }
 
 func (h *ikr) Usage() string {
-	return `ikr - listens for enthusiasm; responds automatically with validation`
+	return `*ikr* - listens for enthusiasm; responds automatically with validation`
 }
 
 func (h *ikr) Pattern() string {
