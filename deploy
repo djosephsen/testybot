@@ -7,8 +7,8 @@ function balk {
 	
 godep update github.com/djosephsen/hal
 [ $? -ne 0 ] && balk "godep update failed for hal"
-godep update github.com/djosephsen/bothandlers
-[ $? -ne 0 ] && balk "godep update failed for bothandlers"
+godep update github.com/djosephsen/HalHandlers
+[ $? -ne 0 ] && balk "godep update failed for HalHandlers"
 
 git add --all .
 [ $? -ne 0 ] && balk "git add failed"

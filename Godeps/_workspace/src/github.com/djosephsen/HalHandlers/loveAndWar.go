@@ -1,4 +1,4 @@
-package bothandlers
+package HalHandlers
 
 import (
 	"fmt"
@@ -16,7 +16,7 @@ type insult struct{
 
 var LoveAndWar = &hal.Handler{
 	Method:  hal.RESPOND,
-	Usage: `*LoveAndWar*: botname (love|insult) <noun>: bot replies with a compliment or insult respectively ** Warning this plugin uses external API's and may return NSF responses**`,
+	Usage: `*LoveAndWar*: botname (love|insult) <noun>: bot replies with a compliment or insult respectively ** Warning this plugin uses external API's and may return NSFW responses**`,
 	Pattern: `(love|insult) (@*\w+)`,
 	Run: func(res *hal.Response) error {
 		act:=res.Match[1]

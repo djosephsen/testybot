@@ -1,4 +1,4 @@
-package bothandlers
+package HalHandlers
 
 import (
 	"time"

@@ -25,8 +25,8 @@
 			"Rev": "83f84dc933714d51504ceed59f43ead21d096fe7"
 		},
 		{
-			"ImportPath": "github.com/djosephsen/bothandlers",
-			"Rev": "7eb36263f633a53e8acc7f9bd291754a4ae87faa"
+			"ImportPath": "github.com/djosephsen/HalHandlers",
+			"Rev": "193604f49d435578a75a986d0f3a7adb2355cdae"
 		},
 		{
 			"ImportPath": "github.com/djosephsen/hal",
