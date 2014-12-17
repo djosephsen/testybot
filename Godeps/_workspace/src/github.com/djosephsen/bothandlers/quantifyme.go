@@ -5,15 +5,14 @@ import (
 	"github.com/djosephsen/hal"
 	"math/rand"
 	"time"
-	"strings"
 )
 
 var Quantifyme = &hal.Handler{
 	Method:  hal.RESPOND,
-	Pattern: `quantify \S+`,
+	Pattern: `quantify (\S+)`,
+	Usage: `Quantifyme: botname quantify <noun>: replies with a randomly generated quantification of funny but probably NSFW personal attributes like 'mads', 'fucks', horribleness and passive-aggresivity`,
 	Run: func(res *hal.Response) error {
-		matchwords:=strings.Split(res.Match[0],` `)
-		user:=matchwords[2]
+		user:=res.Match[1]
 		if user==`me`{ user=`you` }
 		now:=time.Now()
 		rand.Seed(int64(now.Unix()))

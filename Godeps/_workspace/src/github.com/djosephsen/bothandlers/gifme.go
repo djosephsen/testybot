@@ -37,6 +37,7 @@ type gifyout struct{
 var Gifme = &hal.Handler{
 	Method:  hal.RESPOND,
 	Pattern: `gif me (.*)`,
+	Usage: `Gifme: botname gif me freddie mercury: returns a random rated:PG gif of freddy mercury via the giphy API`,
 	Run: func(res *hal.Response) error {
 	
 		search:=res.Match[1]

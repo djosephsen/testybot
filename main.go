@@ -24,6 +24,7 @@ func run() int {
 		bothandlers.ManageChores,
 		bothandlers.LoveAndWar,
 		bothandlers.Gifme,
+		bothandlers.Help,
 	)
 
 //	robot.Schedule(
